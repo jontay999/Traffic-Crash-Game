@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Traffic Game</title>
+    <link rel="stylesheet" href="main.css" />
+    <!-- <script src="https://cdn.jsdelivr.net/npm/three@0.118/build/three.module.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/102/three.js"></script>
+  </head>
+  <body>
+    <div class="overlay">
+      <div class="overlay-content">
+        <div style="text-align: center; font-size: 48px">Game Over!</div>
+        <div style="padding: 10px">
+          Your score was <b><span id="finalScore"></span></b>
+        </div>
+        <div style="padding: 10px">
+          You reached Level <b><span id="finalLevel"></span></b>
+        </div>
+        <div style="padding: 10px">Press [R] to Restart</div>
+      </div>
+    </div>
+    <div class="instructions">
+      <p>You are the red car on the left</p>
+      <p>Make as many rounds as possible without crashing!</p>
+      <p>Press the Up Arrow to accelerate</p>
+      <div style="margin-top: 10px; margin-bottom: 10px">
+        Press the Down Arrow to decelerate.
+      </div>
+      <p>Accelerate to start the game.</p>
+    </div>
+    <div class="score-div">
+      Score:
+      <div id="score">0</div>
+    </div>
+    <div class="level-div">
+      Level&nbsp;
+      <div id="level">1&</div>
+      <span>&nbsp;/ 10</span>
+      <div class="leaderboard">
+        <img class="leaderboard-icon" src="./assets/leaderboard-icon.png" />
+      </div>
+    </div>
+    <div class="accelerate">Accelerate</div>
+    <div class="button up"><div class="triangle-up"></div></div>
+    <div class="button down"><div class="triangle-down"></div></div>
+    <div class="decelerate">Decelerate</div>
+    <div class="leaderboard"></div>
+    <script src="main.js"></script>
+  </body>
+</html>

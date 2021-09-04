@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.score-div {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  font-size: 24px;
+  font-family: Poppins;
+  display: inline;
+}
+
+#score {
+  display: inline-block;
+}
+
+.leaderboard-icon {
+  height: 60px;
+}
+
+.level-div {
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 24px;
+  font-family: Poppins;
+  align-items: center;
+}
+
+#level {
+  display: inline-block;
+}
+
+.accelerate {
+  position: absolute;
+  bottom: 170px;
+  right: 30px;
+  font-family: Poppins;
+  color: #404040;
+}
+
+.decelerate {
+  position: absolute;
+  bottom: 0px;
+  right: 30px;
+  font-family: Poppins;
+  color: #404040;
+}
+.up {
+  position: absolute;
+  bottom: 110px;
+  right: 30px;
+}
+.down {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+.button {
+  padding: 15px 25px;
+  width: 30px;
+  height: 30px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  transition: 0.5s;
+}
+
+.button:hover {
+  transform: scale(1.1);
+  background-color: #017c4f;
+}
+
+.button:active {
+  background-color: #017c4f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.active {
+  background-color: #017c4f;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.triangle-up {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 30px solid #fcab10;
+}
+
+.triangle-down {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 30px solid #fcab10;
+}
+
+.blood {
+  position: absolute;
+  display: inline-block;
+  width: 300px;
+  height: 300px;
+  z-index: 1;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: fadeOut 4s linear;
+  animation-fill-mode: forwards;
+  background-image: url("./assets/blood.png");
+  background-size: cover;
+}
+
+@keyframes fadeOut {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.overlay {
+  position: absolute;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  color: white;
+  font-size: 28px;
+  display: none;
+  background-color: #303030;
+  opacity: 0.7;
+  text-align: center;
+  font-family: Poppins;
+}
+
+.overlay-content {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.instructions {
+  font-family: "Poppins";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.5em;
+  background-color: #303030;
+  padding: 20px 40px;
+  color: white;
+  opacity: 0.8;
+  border-radius: 10px;
+  width: fit-content;
+  text-align: center;
+}
+
+.fire {
+  position: absolute;
+  mix-blend-mode: hard-light;
+  height: 80px;
+  display: none;
+}
